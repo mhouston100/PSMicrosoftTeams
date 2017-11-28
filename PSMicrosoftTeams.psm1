@@ -2,7 +2,7 @@
 	===========================================================================
 	 Created with: 	SAPIEN Technologies, Inc., PowerShell Studio 2017 v5.4.140
 	 Created on:   	22/11/2017 12:36 PM
-	 Created by:   	adminMHouston
+	 Created by:   	Matthewh Houston	
 	 Organization: 	
 	 Filename:     	PSMicrosoftTeams.psm1
 	-------------------------------------------------------------------------
@@ -33,7 +33,7 @@
 	The full URI provided when a webhook is created for an MS Teams channel
 
 	.Example
-	# Show a default display of this month.
+	# Display a critical message, URI has been obfuscated
 	Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -messageBody "Test body" -activityTitle "test Activity" -URI "https://outlook.office.com/webhook/XXXX/IncomingWebhook/XXXX/XXXXXXx" -details @(@{ name = 'name1'; value = 'value1' }, @{ name = 'name2'; value = 'value2' }, @{ name = 'name3'; value = 'value3' })
 
 #>
@@ -49,7 +49,8 @@ function Send-TeamChannelMessage
 		[Parameter(Mandatory = $true)]
 		[string]$messageBody,
 		[string]$activityTitle,
-		[array]$details,
+		[array]$details = $null,
+		[array]$buttons = $null,
 		[Parameter(Mandatory = $true)]
 		[string]$URI
 	)
@@ -59,6 +60,18 @@ function Send-TeamChannelMessage
 		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/green-ok-icon.png" }
 		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/256/yellow-cross-icon.png" }
 		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/red-cross-icon.png" }
+	}
+	
+	$potentialActions = @()
+	
+	foreach ($button in $buttons)
+	{
+		$potentialActions += @{
+			'@context' = 'http://schema.org'
+			'@type'    = 'ViewAction'
+			name	   = $($button.Name)
+			target	 = @("$($button.Value)")
+		}
 	}
 	
 	$body = ConvertTo-Json -Depth 6 @{
@@ -73,18 +86,15 @@ function Send-TeamChannelMessage
 			@{
 				title = 'Details'
 				facts = $details
-<#				potentialAction = @(@{
-						'@context' = 'http://schema.org'
-						'@type'    = 'ViewAction'
-						name	   = 'Button Name'
-						target	 = @("https://google.com.au")
-					}
-				)#>
+				potentialAction = @(
+					$potentialActions
+				)
 			}
 		)
 		
 	}
 	$body
+
 	Invoke-RestMethod -uri $uri -Method Post -body $body -ContentType 'application/json'
 }
 
