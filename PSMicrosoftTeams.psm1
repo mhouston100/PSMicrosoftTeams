@@ -10,18 +10,20 @@
 	===========================================================================
 #>
 
-#Import-Module $env:CamPSModulePath\PSLogging
-#Import-Module $env:CamPSModulePath\PSCamdenEmail
-
 function Send-TeamChannelMessage
 {
-	Param(
-		[Parameter(Mandatory = $true)][ValidateSet("Information", "Warning", "Critical")][string]$messageType,
-		[Parameter(Mandatory = $true)][string]$messageBody,
-		[Parameter(Mandatory = $true)][string]$messageTitle,
+	Param (
+		[Parameter(Mandatory = $true)]
+		[ValidateSet("Information", "Warning", "Critical")]
+		[string]$messageType,
+		[Parameter(Mandatory = $true)]
+		[string]$messageBody,
+		[Parameter(Mandatory = $true)]
+		[string]$messageTitle,
 		[string]$activityTitle,
 		[array]$details,
-		[Parameter(Mandatory = $true)][string]$URI	
+		[Parameter(Mandatory = $true)]
+		[string]$URI
 	)
 	
 	Switch ($messageType)
@@ -30,7 +32,7 @@ function Send-TeamChannelMessage
 		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/256/yellow-cross-icon.png" }
 		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/red-cross-icon.png" }
 	}
-		
+	
 	$body = ConvertTo-Json -Depth 6 @{
 		title    = "$($messageTitle)"
 		text	 = " "
@@ -41,15 +43,15 @@ function Send-TeamChannelMessage
 				activityImage    = "$imageLink"
 			},
 			@{
-				title		   = 'Details'
-				facts		   = $details
-				potentialAction = @(@{
+				title = 'Details'
+				facts = $details
+<#				potentialAction = @(@{
 						'@context' = 'http://schema.org'
 						'@type'    = 'ViewAction'
 						name	   = 'Button Name'
 						target	 = @("https://google.com.au")
 					}
-				)
+				)#>
 			}
 		)
 		
