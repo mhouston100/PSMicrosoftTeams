@@ -10,9 +10,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 This module has a required parameter for the URI which is created when adding a webhook to a Microsoft Teams channel.
 
-To enalbe a webhook on the channel:
+To enable a webhook on a channel:
 
-```
 1. Open Microsoft Teams
 2. Create a new channel or select and existing
 3. Press the three dots '...' to open the settings
@@ -21,7 +20,6 @@ To enalbe a webhook on the channel:
 6. Enter a name and upload and image (if required)
 
 When you select 'Create' the next screen will show a 'URI', make sure you save this somewhere for later use in your script
-```
 
 ### Installing
 
