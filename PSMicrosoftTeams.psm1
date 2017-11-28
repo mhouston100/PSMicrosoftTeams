@@ -8,6 +8,34 @@
 	-------------------------------------------------------------------------
 	 Module Name: PSMicrosoftTeams
 	===========================================================================
+	.Synopsis
+	Send a message to Micrsoft Teams.
+
+	.Description
+	Send a message to a Microsoft Teams 'Webhook' URI. This can include a title, description and details.
+
+	.Parameter messageType
+	The type of message to send, valid types are 'Information','Warning','Critical'. This will decide what icon to apply.
+
+	.Parameter messageTitle
+	The main message title, this heads up all the sections.
+
+	.Parameter messageBody
+	The main details of the message, this will contain a description of the information.
+
+	.Parameter activityTitle
+	A sub-heading for sectioning off the message into parts. Currently implemented to separate the 'details' section.
+
+	.Parameter details
+	An array of hashtables to display key pairs of names and values. Use this to display specific technical information if required.
+
+	.Parameter URI
+	The full URI provided when a webhook is created for an MS Teams channel
+
+	.Example
+	# Show a default display of this month.
+	Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -messageBody "Test body" -activityTitle "test Activity" -URI "https://outlook.office.com/webhook/XXXX/IncomingWebhook/XXXX/XXXXXXx" -details @(@{ name = 'name1'; value = 'value1' }, @{ name = 'name2'; value = 'value2' }, @{ name = 'name3'; value = 'value3' })
+
 #>
 
 function Send-TeamChannelMessage
@@ -17,9 +45,9 @@ function Send-TeamChannelMessage
 		[ValidateSet("Information", "Warning", "Critical")]
 		[string]$messageType,
 		[Parameter(Mandatory = $true)]
-		[string]$messageBody,
-		[Parameter(Mandatory = $true)]
 		[string]$messageTitle,
+		[Parameter(Mandatory = $true)]
+		[string]$messageBody,
 		[string]$activityTitle,
 		[array]$details,
 		[Parameter(Mandatory = $true)]
@@ -35,7 +63,7 @@ function Send-TeamChannelMessage
 	
 	$body = ConvertTo-Json -Depth 6 @{
 		title    = "$($messageTitle)"
-		text	 = " "
+		text	 = "$($messageBody)"
 		sections = @(
 			@{
 				activityTitle    = "$($activityTitle)"
