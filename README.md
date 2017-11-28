@@ -15,7 +15,7 @@ To enalbe a webhook on the channel:
 ```
 1. Open Microsoft Teams
 2. Create a new channel or select and existing
-3. Press the three dots '...' to open the settings
+3. Press the three dots *'...'* to open the settings
 4. Select 'Connectors'
 5. Once the screen loads, select 'Incoming Webhook' by pressing 'Configure'
 6. Enter a name and upload and image (if required)
