@@ -1,6 +1,6 @@
 # PSMicrosoftTeams
 
-Powershell module for sending rich messages to Micrsofot Teams through channel webhooks
+Powershell module for sending rich messages to Microsoft Teams through channel webhooks
 
 ## Getting Started
 
@@ -30,7 +30,9 @@ Add the module files to you module path and use:
 ```
 Import-Module PSMicrosoftTeams
 ```
+NOTE:
 
+This script by default uses publicly accessible icons for the messages, it is recommended that you host your own icons
 
 ## Contributing
 
