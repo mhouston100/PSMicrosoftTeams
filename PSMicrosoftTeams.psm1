@@ -57,9 +57,9 @@ function Send-TeamChannelMessage
 	
 	Switch ($messageType)
 	{
-		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/green-ok-icon.png" }
-		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/256/yellow-cross-icon.png" }
-		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $imageLink = "http://icons.iconarchive.com/icons/double-j-design/origami-colored-pencil/128/red-cross-icon.png" }
+		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $imageLink = "REPLACE WITH YOUR OWN IMAGE URL" }
+		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $imageLink = "REPLACE WITH YOUR OWN IMAGE URL" }
+		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $imageLink = "REPLACE WITH YOUR OWN IMAGE URL" }
 	}
 	
 	$potentialActions = @()
