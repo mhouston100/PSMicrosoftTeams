@@ -6,3 +6,4 @@
 *.Package.ps1
 CustomMenu.inf
 Test-Module.ps1
+*.psproj
