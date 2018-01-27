@@ -57,9 +57,9 @@ function Send-TeamChannelMessage
 	
 	Switch ($messageType)
 	{
-		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $imageLink = "REPLACE WITH YOUR OWN IMAGE URL" }
-		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $imageLink = "REPLACE WITH YOUR OWN IMAGE URL" }
-		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $imageLink = "REPLACE WITH YOUR OWN IMAGE URL" }
+		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $image = [convert]::ToBase64String((Get-Content .\Information.jpg -Encoding byte)) }
+		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $image = [convert]::ToBase64String((Get-Content .\Warning.jpg -Encoding byte)) }
+		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $image = [convert]::ToBase64String((Get-Content .\Critical.jpg -Encoding byte))}
 	}
 	
 	$potentialActions = @()
@@ -81,7 +81,7 @@ function Send-TeamChannelMessage
 			@{
 				activityTitle    = "$($activityTitle)"
 				activitySubtitle = " "
-				activityImage    = "$imageLink"
+				activityImage    = "data:image/png;base64,$image"
 			},
 			@{
 				title = 'Details'
