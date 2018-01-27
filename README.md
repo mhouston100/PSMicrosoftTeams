@@ -47,6 +47,10 @@ Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -mes
 
 See the module for a full parameter explanation.
 
+### Example
+
+![My image](https://github.com/mhouston100/PSMicrosoftTeams/Images/Example-Notification.png)
+
 ## Contributing
 
 https://github.com/mhouston100/PSMicrosoftTeams
