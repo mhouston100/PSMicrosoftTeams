@@ -49,7 +49,7 @@ See the module for a full parameter explanation.
 
 ### Example
 
-![My image](PSMicrosoftTeams/Images/Example-Notification.png)
+![My image](Images/Example-Notification.png)
 
 ## Contributing
 
