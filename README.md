@@ -74,6 +74,6 @@ https://github.com/mhouston100/PSMicrosoftTeams
 
 * **Matthew Houston** - *Initial work* -
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/mhouston100/PSMicrosoftTeams/graphs/contributors) who participated in this project.
 
 
