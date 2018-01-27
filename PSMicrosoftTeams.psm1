@@ -29,12 +29,16 @@
 	.Parameter details
 	An array of hashtables to display key pairs of names and values. Use this to display specific technical information if required.
 
+	.Parameter Buttons
+	An array of hashtables to display key pairs of names and links. Use this to display specific buttons/links below the activity.
+
 	.Parameter URI
 	The full URI provided when a webhook is created for an MS Teams channel
 
 	.Example
 	# Display a critical message, URI has been obfuscated
-	Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -messageBody "Test body" -activityTitle "test Activity" -URI "https://outlook.office.com/webhook/XXXX/IncomingWebhook/XXXX/XXXXXXx" -details @(@{ name = 'name1'; value = 'value1' }, @{ name = 'name2'; value = 'value2' }, @{ name = 'name3'; value = 'value3' })
+
+    Send-TeamChannelMessage -messageType Critical -messageTitle "Test Title" -messageBody "Test body" -activityTitle "test Activity" -URI "PUT YOUR WEBHOOK URI HERE" -details @(@{ name = 'name1'; value = 'value1' }, @{ name = 'name2'; value = 'value2' }, @{ name = 'name3'; value = 'value3' }) -buttons @(@{ name = 'Google'; value = 'https://www.google.com' }, @{ name = 'IT Support Desk'; value = 'https://itsupportdesk.com.au.au' }, @{ name = 'PRTG'; value = 'https://monitoring.com' })
 
 #>
 

@@ -4,7 +4,8 @@ Powershell module for sending rich messages to Microsoft Teams through channel w
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+For basic operation simply clone or download the module to your local machine or module repo.
+
 
 ### Prerequisites
 
@@ -21,16 +22,30 @@ To enable a webhook on a channel:
 
 When you select 'Create' the next screen will show a 'URI', make sure you save this somewhere for later use in your script
 
-### Installing
+## Installing
+
+### Powershell
 
 Add the module files to you module path and use:
 
 ```
 Import-Module PSMicrosoftTeams
 ```
-NOTE:
 
-This script by default uses publicly accessible icons for the messages, it is recommended that you host your own icons
+### Images
+The script will use BASE64 encoded images located in the 'IMAGES' folder. You can replace these with your own images if you want to match a particular corporate style.
+
+The images must be .JPG format and should be kept as small as possible to avoid timeouts when uploading to teams. 
+
+## Usage
+
+To send an MS Teams notification from a script use the following format:
+
+```
+Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -messageBody "Test body" -activityTitle "test Activity" -URI "INSERT YOUR WEBHOOK URI HERE" -details @(@{ name = 'name1'; value = 'value1' }, @{ name = 'name2'; value = 'value2' }, @{ name = 'name3'; value = 'value3' }) -buttons @(@{ name = 'Google'; value = 'https://www.google.com' }, @{ name = 'IT Support Desk'; value = 'https://itsupportdesk.camden.nsw.gov.au' }, @{ name = 'PRTG'; value = 'https://prtg.camden.nsw.gov.au' })
+```
+
+See the module for a full parameter explanation.
 
 ## Contributing
 
