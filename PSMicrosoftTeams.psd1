@@ -25,13 +25,13 @@
 	GUID = 'e273d643-9e09-4cbe-b2fd-8443278b4126'
 	
 	# Author of this module
-	Author = 'adminMHouston'
+	Author = 'Matthew Houston'
 	
 	# Company or vendor of this module
 	CompanyName = ''
 	
 	# Copyright statement for this module
-	Copyright = '(c) 2017. All rights reserved.'
+	Copyright = '(c) 2018. All rights reserved.'
 	
 	# Description of the functionality provided by this module
 	Description = 'Module for interacting with Microsoft Teams channels'
