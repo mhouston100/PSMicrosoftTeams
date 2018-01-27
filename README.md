@@ -42,7 +42,7 @@ The images must be .JPG format and should be kept as small as possible to avoid 
 To send an MS Teams notification from a script use the following format:
 
 ```
-Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -messageBody "Test body" -activityTitle "test Activity" -URI "INSERT YOUR WEBHOOK URI HERE" -details @(@{ name = 'name1'; value = 'value1' }, @{ name = 'name2'; value = 'value2' }, @{ name = 'name3'; value = 'value3' }) -buttons @(@{ name = 'Google'; value = 'https://www.google.com' }, @{ name = 'IT Support Desk'; value = 'https://itsupportdesk.camden.nsw.gov.au' }, @{ name = 'PRTG'; value = 'https://prtg.camden.nsw.gov.au' })
+Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -messageBody "Test body" -activityTitle "test Activity" -URI "INSERT YOUR WEBHOOK URI HERE" -details @(@{ name = 'name1'; value = 'value1' }, @{ name = 'name2'; value = 'value2' }, @{ name = 'name3'; value = 'value3' }) -buttons @(@{ name = 'Google'; value = 'https://www.google.com' }, @{ name = 'IT Support Desk'; value = 'https://itsupportdesk.com' }, @{ name = 'PRTG'; value = 'https://prtg.com' })
 ```
 
 See the module for a full parameter explanation.
