@@ -47,9 +47,23 @@ Send-TeamChannelMessage -messageType Information -messageTitle "Test Title" -mes
 
 See the module for a full parameter explanation.
 
-### Example
+### Examples
 
-![My image](Images/Example-Notification.png)
+Default Example
+
+![My image](README/Example-Notification.png)
+
+PRTG Notification Example
+
+![My image](README/PRTG-Notification.png)
+
+SCCM OSD Build Example
+
+![My image](README/SCCM-Notification.png)
+
+Group Policy Change Exmaple
+
+![My image](README/GPO-Notification.png)
 
 ## Contributing
 
