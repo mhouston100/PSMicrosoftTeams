@@ -49,19 +49,19 @@ See the module for a full parameter explanation.
 
 ## Examples
 
-## Default Example
+### Default Example
 
 ![My image](README/Default-Example.png)
 
-## PRTG Notification Example
+### PRTG Notification Example
 
 ![My image](README/PRTG-Example.png)
 
-## SCCM OSD Build Example
+### SCCM OSD Build Example
 
 ![My image](README/SCCM-Example.png)
 
-## Group Policy Change Example
+### Group Policy Change Example
 
 ![My image](README/GPO-Example.png)
 
