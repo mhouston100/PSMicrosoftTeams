@@ -61,9 +61,9 @@ function Send-TeamChannelMessage
 	
 	Switch ($messageType)
 	{
-		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $image = [convert]::ToBase64String((Get-Content .\Information.jpg -Encoding byte)) }
-		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $image = [convert]::ToBase64String((Get-Content .\Warning.jpg -Encoding byte)) }
-		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $image = [convert]::ToBase64String((Get-Content .\Critical.jpg -Encoding byte))}
+		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Information.jpg" -Encoding byte)) }
+		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Warning.jpg" -Encoding byte)) }
+		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Critical.jpg" -Encoding byte))}
 	}
 	
 	$potentialActions = @()
