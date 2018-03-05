@@ -15,7 +15,7 @@
 	Send a message to a Microsoft Teams 'Webhook' URI. This can include a title, description and details.
 
 	.Parameter messageType
-	The type of message to send, valid types are 'Information','Warning','Critical'. This will decide what icon to apply.
+	The type of message to send, valid types are 'Information', 'Success', 'Warning','Critical'. This will decide what icon to apply.
 
 	.Parameter messageTitle
 	The main message title, this heads up all the sections.
@@ -61,7 +61,7 @@ function Send-TeamChannelMessage
 {
 	Param (
 		[Parameter(Mandatory = $true)]
-		[ValidateSet("Information", "Warning", "Critical")]
+		[ValidateSet("Information", "Success", "Warning", "Critical")]
 		[string]$messageType,
 		[Parameter(Mandatory = $true)]
 		[string]$messageTitle,
@@ -86,7 +86,8 @@ function Send-TeamChannelMessage
 	
 	Switch ($messageType)
 	{
-		{ $_ -eq "Information" } { $notify = $true; $titleColor = "green"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Information.jpg" -Encoding byte)) }
+		{ $_ -eq "Information" } { $notify = $true; $titleColor = "blue"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Information.jpg" -Encoding byte)) }
+		{ $_ -eq "Success" } { $notify = $true; $titleColor = "green"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Success.jpg" -Encoding byte)) }
 		{ $_ -eq "Warning" } { $notify = $true; $titleColor = "orange"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Warning.jpg" -Encoding byte)) }
 		{ $_ -eq "Critical" } { $notify = $true; $titleColor = "red"; $image = [convert]::ToBase64String((Get-Content "$PSScriptRoot\Images\Critical.jpg" -Encoding byte))}
 	}
