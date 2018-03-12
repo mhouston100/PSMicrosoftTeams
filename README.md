@@ -49,21 +49,23 @@ See the module for a full parameter explanation.
 
 ## Examples
 
-### Default Example
+For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
-![My image](README/Default-Example.png)
+### GPO Change Notification
+
+![Example-GPONotification](/Examples/Group%20Policy/Images/Example-GPONotification.jpg)
 
 ### PRTG Notification Example
 
-![My image](README/PRTG-Example.png)
+![Example-PRTGNotification](/Examples/PRTG/ImagesExample-PRTGNotification.jpg)
 
 ### SCCM OSD Build Example
 
-![My image](README/SCCM-Example.png)
+![Example-SCCMOSD](/Examples/SCCM%20OSD/Images/Example-SCCMOSD.jpg)
 
-### Group Policy Change Example
+### ServiceDesk Plus Ticket Notification Exmaple
 
-![My image](README/GPO-Example.png)
+![Example-SDPNotification](/Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
 
 ## Contributing
 
