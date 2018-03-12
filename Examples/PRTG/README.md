@@ -1,4 +1,4 @@
-# PSMicrosoftTeams - GPO Notification Example
+# PSMicrosoftTeams - PRTG Notification Example
 
 # Description
 
