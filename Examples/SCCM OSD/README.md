@@ -17,6 +17,7 @@ The basic operation is:
 ### Requirements
 
 * Access to SCCM packages and TS
+* By default the script requires the local disk have a partition, if you have it at a stage where the disk is blank, make sure you adjust your SCCM settings to reflect this
 
 ## Configuration
 
@@ -24,15 +25,15 @@ The basic operation is:
 
 2. Distribute the package content
 
-3. Edit your task sequence and add the step 'Run PowerShell Script' and select your script package. Enter the details as follows:
+3. Edit your task sequence and add the step 'Run PowerShell Script' to the beginning of your TS and select your script package. Enter the details as follows:
 
-** Script Name **
+**Script Name**
 
 ```
 Send-BuildNotification.ps1
 ```
 
-** Parameters **
+**Parameters**
 
 ```
 -message Started
@@ -45,11 +46,4 @@ Send-BuildNotification.ps1
 ![Example-SCCMOSD](/Examples/SCCM%20OSD/Example-TaskSequence.png)
 
 
-
-
-
-
-
-## Example
-
-![Example-GPONotification](/Examples/PRTG/Example-PRTGNotification.jpg)
+4. Create two more 
