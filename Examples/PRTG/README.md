@@ -49,4 +49,4 @@ Send-SensorNotification.ps1
 
 ## Example
 
-![Example-GPONotification](/Examples/PRTG/Example-PRTGNotification.jpg)
+![Example-PRTGNotification](/Examples/PRTG/ImagesExample-PRTGNotification.jpg)
