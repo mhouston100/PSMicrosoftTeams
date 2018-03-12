@@ -36,4 +36,4 @@ C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 
 ## Example
 
-![Example-GPONotification](/Example-GPONotification.jpg)
+![Example-GPONotification](/Examples/Group%20Policy/Example-GPONotification.jpg)
