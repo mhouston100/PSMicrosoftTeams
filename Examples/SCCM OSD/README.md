@@ -43,7 +43,13 @@ Send-BuildNotification.ps1
 
 ### Example:
 
-![Example-SCCMOSD](/Examples/SCCM%20OSD/Example-TaskSequence.png)
+![Example-SCCMOSD](/Examples/SCCM%20OSD/Images/Example-TaskSequence.png)
 
 
-4. Create two more 
+4. Create two more steps, one at the very end, replace -message with 'Success' and one in your failure section, replacing -message with 'Failed'
+
+5. Run a test OSD
+
+## Example
+
+![Example-SCCMOSD](/Examples/SCCM%20OSD/Images/Example-SCCMOSD.jpg)
