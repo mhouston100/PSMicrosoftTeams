@@ -22,14 +22,18 @@ The basic operation is:
 
 Configure this script as a scheduled task, by default every 5 minutes with the command:
 
-Program / Script
+**Program / Script**
 
 ```
 C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
 ```
 
-Parameters
+**Parameters**
 
 ```
 -command "& '<path to script>\Send-GPOChangeNotification.ps1"'
 ```
+
+## Example
+
+![Example-GPONotification](/Example-GPONotification.jpg)
