@@ -53,19 +53,19 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### GPO Change Notification
 
-![Example-GPONotification](/Examples/Group%20Policy/Images/Example-GPONotification.jpg)
+![Example-GPONotification](./Examples/Group%20Policy/Images/Example-GPONotification.jpg)
 
 ### PRTG Notification Example
 
-![Example-PRTGNotification](/Examples/PRTG/Images/Example-PRTGNotification.jpg)
+![Example-PRTGNotification](./Examples/PRTG/Images/Example-PRTGNotification.jpg)
 
 ### SCCM OSD Build Example
 
-![Example-SCCMOSD](/Examples/SCCM%20OSD/Images/Example-SCCMOSD.jpg)
+![Example-SCCMOSD](./Examples/SCCM%20OSD/Images/Example-SCCMOSD.jpg)
 
 ### ServiceDesk Plus Ticket Notification Exmaple
 
-![Example-SDPNotification](/Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
+![Example-SDPNotification](./Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
 
 ## Contributing
 
