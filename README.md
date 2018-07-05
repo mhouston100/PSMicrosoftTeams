@@ -1,6 +1,6 @@
 # PSMicrosoftTeams
 
-Powershell module for sending rich messages to Microsoft Teams through channel webhooks
+Powershell module for sending rich messages to Microsoft Teams through channel webhooks. Test
 
 ## Getting Started
 
