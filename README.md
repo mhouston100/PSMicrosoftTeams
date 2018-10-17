@@ -57,7 +57,7 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### PRTG Notification Example
 
-![Example-PRTGNotification](./tree/master/Examples/PRTG/Images/Example-PRTGNotification.jpg)
+![Example-PRTGNotification](./Examples/PRTG/Images/Example-PRTGNotification.jpg)
 
 ### SCCM OSD Build Example
 
@@ -65,7 +65,7 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### ServiceDesk Plus Ticket Notification Exmaple
 
-![Example-SDPNotification](https://github.com/mhouston100/repository/blob/master/Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
+![Example-SDPNotification](./Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
 
 ## Contributing
 
