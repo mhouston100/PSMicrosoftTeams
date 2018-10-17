@@ -57,7 +57,7 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### PRTG Notification Example
 
-![Example-PRTGNotification](./Examples/PRTG/Images/Example-PRTGNotification.jpg)
+![Example-PRTGNotification](./tree/master/Examples/PRTG/Images/Example-PRTGNotification.jpg)
 
 ### SCCM OSD Build Example
 
