@@ -65,7 +65,7 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### ServiceDesk Plus Ticket Notification Exmaple
 
-![Example-SDPNotification](./Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
+![Example-SDPNotification](https://github.com/mhouston100/repository/blob/master/Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
 
 ## Contributing
 
