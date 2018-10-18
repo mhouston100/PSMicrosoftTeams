@@ -53,7 +53,7 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### GPO Change Notification
 
-![Example-GPONotification](./Examples/Group%20Policy/Images/Example-GPONotification.jpg)
+![Example-GPONotification](/Examples/Group%20Policy/Images/Example-GPONotification.jpg)
 
 ### PRTG Notification Example
 
@@ -65,7 +65,7 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### ServiceDesk Plus Ticket Notification Exmaple
 
-![Example-SDPNotification](./Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
+![Example-SDPNotification](/Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
 
 ## Contributing
 
