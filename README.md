@@ -69,7 +69,7 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ### Azure Power Status Notification Exmaple
 
-![Example-AzureNotification](/Examples/Azure/Images/Example-AzureVMPowerState.jpg)
+![Example-AzureNotification](/Examples/Azure/Images/Example-AzureVMPowerstate.jpg)
 
 ## Contributing
 
