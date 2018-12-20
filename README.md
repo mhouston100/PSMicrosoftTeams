@@ -33,9 +33,15 @@ Import-Module PSMicrosoftTeams
 ```
 
 ### Images
-The script will use BASE64 encoded images located in the 'IMAGES' folder. You can replace these with your own images if you want to match a particular corporate style.
+*I have changed the images to be embedded in the script for simplicity and portability. These images are just Base64 encoded strings of the original included images*
 
-The images must be .JPG format and should be kept as small as possible to avoid timeouts when uploading to teams. 
+To replace the images use the command:
+
+````
+[convert]::ToBase64String((Get-Content .\warning.jpg -Encoding Byte))
+````
+
+Then copy the output string into the variables in the 'InlineImages' region.
 
 ## Usage
 
