@@ -67,6 +67,10 @@ For instructions on these examples plese see the 'EXAMPLES' sub-folder.
 
 ![Example-SDPNotification](/Examples/ServiceDesk%20Plus/Images/Example-SDPNotification.jpg)
 
+### Azure Power Status Notification Exmaple
+
+![Example-AzureNotification](/Examples/Azure/Images/Example-AzureVMPowerState.jpg)
+
 ## Contributing
 
 https://github.com/mhouston100/PSMicrosoftTeams
